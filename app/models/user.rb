@@ -5,7 +5,7 @@ class User < ApplicationRecord
 
   validates_associated :posts, :comments, :likes
 
-  def get_recent_posts
+  def recent_posts
     posts.order(updated_at: :desc).limit(3)
   end
 end
