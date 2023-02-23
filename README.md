@@ -30,7 +30,7 @@ After you're finished please remove all the comments and instructions!
   <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
-  <h3><b>Microverse README Template</b></h3>
+  <h3><b>Blog App</b></h3>
 
 </div>
 
@@ -82,7 +82,7 @@ After you're finished please remove all the comments and instructions!
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
+    <li><a href="https://expressjs.com/">Ruby</a></li>
   </ul>
 </details>
 
@@ -148,6 +148,11 @@ Example commands:
 ```
 --->
 
+```sh
+  git clone https://github.com/heintayzar-hm/blog.git
+  cd blog
+```
+
 ### Install
 
 Install this project with:
@@ -160,6 +165,10 @@ Example command:
   gem install
 ```
 --->
+```sh
+  cd blog
+  gem install
+```
 
 ### Usage
 
@@ -172,6 +181,12 @@ Example command:
   rails server
 ```
 --->
+
+```sh
+  rails db:create
+  rails db:migrate
+  rails server
+```
 
 ### Run tests
 
@@ -203,19 +218,11 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
+👤 **Hein Tay Zar**
 
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Hein Tay](https://github.com/heintayzar-hm)
+- Twitter: [@Hein Tay](https://twitter.com/heintayzarhm)
+- LinkedIn: [Hein Tay](https://www.linkedin.com/in/hein-tay-zar)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -281,8 +288,6 @@ I would like to thank...
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+This project is [MIT](./MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
