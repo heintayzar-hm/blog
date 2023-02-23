@@ -37,7 +37,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_23_091252) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "title"
-    t.string "text"
+    t.text "text"
     t.integer "comments_counter"
     t.integer "likes_counter"
     t.bigint "author_id", null: false
@@ -49,7 +49,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_23_091252) do
     t.datetime "updated_at", null: false
     t.string "name"
     t.string "photo"
-    t.string "bio"
+    t.text "bio"
     t.integer "posts_counter"
   end
 
