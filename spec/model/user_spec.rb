@@ -27,6 +27,5 @@ RSpec.describe User, type: :model do
   it 'cannot add user without name' do
     user = User.create(photo: 'https://www.google.com', bio: 'I am a user')
     expect(user).not_to be_valid
-
   end
 end
