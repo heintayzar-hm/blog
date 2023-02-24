@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  let(:user) { User.new(name: 'John', photo: 'https://www.google.com', bio: 'I am a user')}
+  let(:user) { User.new(name: 'John', photo: 'https://www.google.com', bio: 'I am a user') }
   subject { Post.new(title: 'Title', text: 'Text', author: user) }
   before { subject.save }
 
@@ -13,7 +13,7 @@ RSpec.describe Post, type: :model do
     expect(subject.text).to eq('Text')
   end
 
-  it "title has a maximum length of 250 characters" do
+  it 'title has a maximum length of 250 characters' do
     expect(subject.title.length).to be <= 250
   end
 

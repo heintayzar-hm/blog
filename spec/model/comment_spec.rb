@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
-  let(:user) { User.new(name: 'John', photo: 'https://www.google.com', bio: 'I am a user')}
+  let(:user) { User.new(name: 'John', photo: 'https://www.google.com', bio: 'I am a user') }
   let(:post) { Post.new(title: 'Title', text: 'Text', author: user) }
   subject { Comment.new(text: 'Text', author: user, post: post) }
   before { subject.save }
