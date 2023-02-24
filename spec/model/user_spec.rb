@@ -23,4 +23,10 @@ RSpec.describe User, type: :model do
   it 'method recent_posts returns the 3 most recent posts' do
     expect(subject.recent_posts).to eq(subject.posts.order(updated_at: :desc).limit(3))
   end
+
+  it 'cannot add user without name' do
+    user = User.create(photo: 'https://www.google.com', bio: 'I am a user')
+    expect(user).not_to be_valid
+
+  end
 end
