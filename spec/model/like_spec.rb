@@ -11,7 +11,7 @@ RSpec.describe Like, type: :model do
   end
 
   it 'method update_likes_counter increments likes_counter by 1' do
-    expect(subject.update_likes_counter).to eq(subject.posts.increment!(:likes_counter))
+    expect(subject.send(:update_likes_counter)).to eq(subject.posts.increment!(:likes_counter))
   end
 
   it 'belongs to author' do

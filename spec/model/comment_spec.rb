@@ -15,6 +15,6 @@ RSpec.describe Comment, type: :model do
   end
 
   it 'method update_comments_counter increments comments_counter by 1' do
-    expect(subject.update_comments_counter).to eq(subject.post.increment!(:comments_counter))
+    expect(subject.send(:update_comments_counter)).to eq(subject.post.increment!(:comments_counter))
   end
 end

@@ -26,6 +26,6 @@ RSpec.describe Post, type: :model do
   end
 
   it 'method update_posts_counter increments posts_counter by 1' do
-    expect(subject.update_posts_counter).to eq(subject.author.increment!(:posts_counter))
+    expect(subject.send(:update_posts_counter)).to eq(subject.author.increment!(:posts_counter))
   end
 end
