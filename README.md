@@ -27,8 +27,6 @@ After you're finished please remove all the comments and instructions!
 
 <div align="center">
   <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
 
   <h3><b>Blog App</b></h3>
 
@@ -60,11 +58,11 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 [blog] <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
+ Looking for a new blog platform? Look no further than the Blog app! With a sleek design and user-friendly interface, this app lets readers discover new posts and authors while giving creators the tools to showcase their writing skills.
 
-**[your_project__name]** is a...
+**[blog]**  a fully functional website that allows readers to view and interact with posts through comments and likes.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -82,7 +80,7 @@ After you're finished please remove all the comments and instructions!
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://expressjs.com/">Ruby</a></li>
+    <li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
   </ul>
 </details>
 
@@ -99,9 +97,9 @@ After you're finished please remove all the comments and instructions!
 
 > Describe between 1-3 key features of the application.
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- **[Auth]**
+- **[CRUD]**
+- **[clean_ui]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -111,7 +109,7 @@ After you're finished please remove all the comments and instructions!
 
 > Add a link to your deployed project.
 
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+- [Live Demo Link](https://github.com/heintayzar-hm/blog)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -188,6 +186,8 @@ Example command:
   rails server
 ```
 
+You can open <a href=" http://localhost:3000/ "> http://localhost:3000/ </a> in browser
+
 ### Run tests
 
 To run tests, run the following command:
@@ -232,9 +232,8 @@ Example:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **[Adding_admin_dashboard]**
+- [ ] **[Adding_email]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -254,7 +253,7 @@ Feel free to check the [issues page](../../issues/).
 
 > Write a message to encourage readers to support your project
 
-If you like this project...
+If you like this project, just give some ⭐️.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -264,7 +263,7 @@ If you like this project...
 
 > Give credit to everyone who inspired your codebase.
 
-I would like to thank...
+I would like to thank Microverse for giving this opportunity
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
