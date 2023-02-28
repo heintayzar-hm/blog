@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe UsersController, type: :controller do
-  describe "#GET /" do
+  describe '#GET /' do
     before(:each) do
       @user = User.create(name: 'User 1')
       @user1 = User.create(name: 'User 2')
@@ -9,10 +9,10 @@ RSpec.describe UsersController, type: :controller do
 
       get 'index'
     end
-    it "returns 200 code" do
+    it 'returns 200 code' do
       expect(response).to have_http_status(200)
     end
-    it "returns correct page" do
+    it 'returns correct page' do
       expect(response).to render_template(:index)
     end
 
@@ -22,7 +22,7 @@ RSpec.describe UsersController, type: :controller do
     end
 
     it 'contains a user' do
-      expect(response.body).to include('User 1')
+      expect(response.body).to include(@user.name)
     end
 
     it 'contains three users' do
@@ -30,28 +30,28 @@ RSpec.describe UsersController, type: :controller do
       expect(html.css('.user').count).to eq(3)
     end
   end
-  describe "#GET /users/:id" do
+  describe '#GET /users/:id' do
     before(:each) do
       @user = User.create(name: 'User 1')
       @user2 = User.create(name: 'User 2')
-      get 'show', params: {id: @user.id}
+      get 'show', params: { id: @user.id }
     end
 
-    it "returns 200 code" do
+    it 'returns 200 code' do
       expect(response).to have_http_status(200)
     end
 
-    it "returns correct page" do
+    it 'returns correct page' do
       expect(response).to render_template(:show)
     end
     ### delete on update
 
-    it "returns correct text" do
+    it 'returns correct text' do
       expect(response.body).to include('USER: ')
     end
 
-    it "returns correct user" do
-      expect(response.body).to include('User 1')
+    it 'returns correct user' do
+      expect(response.body).to include(@user.name)
     end
 
     it 'has one user' do
