@@ -14,4 +14,17 @@ class PostsController < ApplicationController
     @user = @post.author
     render :show, locals: { post: @post, comments: @comments, user: @user }
   end
+
+  def new
+    @post = current_user.posts.new
+  end
+
+  def create
+    @post = current_user.posts.new(title: params[:post][:title], text: params[:post][:text])
+    if @post.save
+      redirect_to user_posts_path(current_user)
+    else
+      render :new
+    end
+  end
 end
