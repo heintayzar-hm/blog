@@ -77,3 +77,6 @@ end
 group :development, :test do
   gem 'rspec-rails'
 end
+
+gem 'bullet', group: 'development'
+gem 'xmpp4r', group: 'development'

@@ -7,10 +7,10 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find_by(author_id: params[:user_id], id: params[:id])
+    @post = Post.includes(comments: :author).find_by(author_id: params[:user_id], id: params[:id])
     render file: "#{Rails.root}/public/404.html", status: :not_found, layout: false if @post.nil?
 
-    @comments = @post.comments
+    @comments = @post.comments.includes(:author)
     @user = @post.author
     render :show, locals: { post: @post, comments: @comments, user: @user }
   end

@@ -22,28 +22,22 @@
           <h3 class="tracking-wider font-important text-lg font-semibold"><%= post.title%></h3>
           <p class="pt-4 break-words"><%= post.text.truncate(100) %></p>
         </a>
-         <span class="flex justify-end my-2 gap-2">
-            <a href="/users/<%= @user.id%>/posts/<%= post.id%>/comments/new" class="hover:text-red-400">Comments: <%= post.comments_counter%>  </a>
-            <div class="cursor-pointer">
-              <%= form_with model: @like, url: create_user_post_like_url(@user, post), method: :post, local: true, scope: :post do |f| %>
-             <div >
-              <%= f.submit "Likes: #{post.likes_counter}", class:"cursor-pointer hover:text-red-400" %>
-              </div>
-            <% end %>
-            </div>
-          </span>
+        <span class="flex justify-end my-2 gap-2">
+          <a href="/users/<%= @user.id%>/posts/<%= post.id%>/comments/new" class="hover:text-red-400">Comments: <%= post.comments_counter%>  </a>
+          <div class="cursor-pointer like">
+            <span class="like-counter"><%= post.likes_counter%></span>
+
+          </div>
+        </span>
       </li>
     <% end %>
   </ul>
-  <% if @posts.length > 3%>
-    <div class="flex justify-around text-center items-center">
-      <button onclick="show(event,'<%= @posts.to_json%>')" id="load-more-posts" type="button" class=" p-2 hover:bg-black hover:text-red-400 rounded-lg tracking-wider font-important text-lg font-semibold">Load More</button>
-      <a href='/users/<%=@user.id%>/posts' class="p-2 hover:bg-black hover:text-red-400 rounded-lg tracking-wider font-important text-lg font-semibold">See All Posts</a>
-    </div>
-  <%end%>
   <div class="flex justify-around text-center items-center">
-      <a href='/users/<%=@user.id%>/posts' class="p-2 hover:bg-black hover:text-red-400 rounded-lg tracking-wider font-important text-lg font-semibold">See All Posts</a>
-    </div>
+    <% if @posts.length > 3%>
+      <button onclick="show(event,'<%= @posts.to_json%>')" id="load-more-posts" type="button" class=" p-2 hover:bg-black hover:text-red-400 rounded-lg tracking-wider font-important text-lg font-semibold">Load More</button>
+    <%end%>
+    <a href='/users/<%=@user.id%>/posts' class="p-2 hover:bg-black hover:text-red-400 rounded-lg tracking-wider font-important text-lg font-semibold">See All Posts</a>
+  </div>
   <section>
     <script>
       const loadMoreBtn = document.getElementById('load-more-posts');
