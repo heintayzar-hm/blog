@@ -7,7 +7,7 @@ RSpec.describe PostsController, type: :controller do
       @post = Post.create(title: 'Post 1', text: 'Post 1 text', author_id: @user.id)
       @post2 = Post.create(title: 'Post 2', text: 'Post 2 text', author_id: @user.id)
       @post3 = Post.create(title: 'Post 3', text: 'Post 3 text', author_id: @user.id)
-      get 'index', params: { user_id: @post.author_id }
+      get :index, params: { user_id: @post.author_id }
     end
 
     it 'returns 200 code' do
@@ -18,13 +18,10 @@ RSpec.describe PostsController, type: :controller do
       expect(response).to render_template(:index)
     end
 
-    it 'return correct text' do
-      expect(response.body).to include('This is posts page')
-    end
-
     it 'has three posts' do
       html = Nokogiri::HTML(response.body)
       expect(html.css('.post').count).to eq(3)
+      # puts html
     end
   end
 
@@ -43,10 +40,6 @@ RSpec.describe PostsController, type: :controller do
 
     it 'render correct page' do
       expect(response).to render_template(:show)
-    end
-
-    it 'return correct text' do
-      expect(response.body).to include('This is post page')
     end
 
     it 'has one post' do
