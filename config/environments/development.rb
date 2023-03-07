@@ -69,17 +69,17 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
 
 
-  config.after_initialize do
-    Bullet.enable = true
-    # Bullet.sentry = true
-    Bullet.alert = true
-    Bullet.bullet_logger = true
-    Bullet.console = true
-    # Bullet.xmpp = { :account  => 'bullets_account@jabber.org',
-    #                 :password => 'bullets_password_for_jabber',
-    #                 :receiver => 'your_account@jabber.org',
-    #                 :show_online_status => false }
-    Bullet.rails_logger = true
+  # config.after_initialize do
+  #   Bullet.enable = true
+  #   # Bullet.sentry = true
+  #   Bullet.alert = true
+  #   Bullet.bullet_logger = true
+  #   Bullet.console = true
+  #   # Bullet.xmpp = { :account  => 'bullets_account@jabber.org',
+  #   #                 :password => 'bullets_password_for_jabber',
+  #   #                 :receiver => 'your_account@jabber.org',
+  #   #                 :show_online_status => false }
+  #   Bullet.rails_logger = true
     # Bullet.honeybadger = true
     # Bullet.bugsnag = true
     # Bullet.appsignal = true
