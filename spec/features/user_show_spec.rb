@@ -17,7 +17,8 @@ describe '# / or /users/:user_id', type: :feature do
     expect(page).to have_content('User 1')
     expect(page).to have_content('Total Posts: 4')
     expect(page).to have_content('This is user page')
-    expect(page).to have_content('Post 2').and have_content('Post 3').and have_content('Post 4') # post is updated so the order will be in reverse.
+    expect(page).to have_content('Post 2').and have_content('Post 3').and have_content('Post 4')
+    # post is updated so the order will be in reverse.
   end
 
   it 'I can see a button that lets me view all of a user posts.' do

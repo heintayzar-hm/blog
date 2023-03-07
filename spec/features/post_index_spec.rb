@@ -31,7 +31,7 @@ describe '# / or /users/:user_id/posts', type: :feature do
     visit user_posts_path(@user)
   end
 
-  it 'I  can see the user profile picture ,can see the users username. , the number of posts the user has written. , posts title, posts body' do
+  it 'can see the user profile picture, username,the number of posts the user has written, posts title, posts body' do
     expect(page).to have_css(
       'img[src*="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"]'
     )
@@ -42,8 +42,16 @@ describe '# / or /users/:user_id/posts', type: :feature do
   end
 
   it 'I can see the first comments on a post, how many comments a post has., how many likes a post has' do
-    expect(page).to have_content('This is comment 1').and have_content('This is comment 2').and have_content('This is comment 3').and have_content('This is comment 4').and have_content('This is comment 5')
-    expect(page).to have_content('Comments: 2').and have_content('Comments: 1').and have_content('Comments: 1').and have_content('Comments: 1')
+    comments = ['This is comment 1', 'This is comment 2', 'This is comment 3', 'This is comment 4', 'This is comment 5']
+    comments.each do |comment|
+      expect(page).to have_content(comment)
+    end
+
+    counts = ['Comments: 2', 'Comments: 1', 'Comments: 1', 'Comments: 1']
+    counts.each do |count|
+      expect(page).to have_content(count)
+    end
+
     expect(page).to have_content('Likes: 6').and have_content('Likes: 4').and have_content('Likes: 2')
   end
 

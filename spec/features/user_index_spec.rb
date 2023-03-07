@@ -17,7 +17,10 @@ describe '# / or /users', type: :feature do
   end
 
   it 'I can see the number of posts each user has written.' do
-    expect(page).to have_content('Total Posts: 10').and have_content('Total Posts: 3').and have_content('Total Posts: 0')
+    totals = ['Total Posts: 10', 'Total Posts: 3', 'Total Posts: 0']
+    totals.each do |total|
+      expect(page).to have_content(total)
+    end
   end
 
   it "When I click on a user, I am redirected to that user's show page." do

@@ -224,6 +224,13 @@ Example:
 - Twitter: [@Hein Tay](https://twitter.com/heintayzarhm)
 - LinkedIn: [Hein Tay](https://www.linkedin.com/in/hein-tay-zar)
 
+
+👤 **PROMISE OKECHUKWU**
+
+- GitHub: [@promzzykoncepts](https://github.com/PromzzyKoncepts)
+- Twitter: [@pr0mzzy](https://twitter.com/prOmzzy)
+- LinkedIn: [promiseokechukwu](https://linkedin.com/in/promiseokechukwu)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->

@@ -5,7 +5,7 @@ describe '# / or /users/:user_id/posts/:post_id', type: :feature do
     @user = User.create(name: 'User 1', bio: 'This is user page', photo: 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png')
     @user2 = User.create(name: 'User 2', bio: 'This is user page', photo: 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png')
     @user3 = User.create(name: 'User 3', bio: 'This is user page', photo: 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png')
-    
+
     @post = Post.create(title: 'Post 1', text: 'This is post 1', author_id: @user.id)
     @post2 = Post.create(title: 'Post 2', text: 'This is post 2', author_id: @user.id)
     @comment = Comment.create(text: 'This is comment 1', author_id: @user2.id, post_id: @post2.id)
