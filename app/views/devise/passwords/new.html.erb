@@ -1,0 +1,22 @@
+<h2 class="text-center font-important my-5">Forgot your password?</h2>
+
+<div class="mx-10 my-3">
+
+
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, :class => 'flex flex-col gap-5' }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "border px-2 focus:outline-none w-full py-1" %>
+  </div>
+
+  <div class="actions text-center">
+    <%= f.submit "Send me reset password instructions", class: "cursor-pointer w-full bg-red-400 text-white font-bold py-1 hover:bg-black hover:text-red-400" %>
+  </div>
+<% end %>
+<div class="text-center my-3 ">
+<%= render "devise/shared/links" %>
+
+</div>
+</div>

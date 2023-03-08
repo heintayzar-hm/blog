@@ -11,10 +11,12 @@
       </div>
     </div>
   </div>
+  <% if !@user.bio.nil?%>
   <div class="hover:bg-slate-300 rounded-lg p-3">
     <h2 class="tracking-wider font-important text-lg font-semibold">Bio</h2>
     <p class="font-type1 max-h-[70px] text-ellipsis overflow-hidden"><%= @user.bio%></p>
   </div>
+  <%end%>
   <ul class="grid grid-cols-1 gap-5" id="posts-container">
     <% @user.recent_posts.each do |post|%>
       <li>
@@ -25,7 +27,7 @@
         <span class="flex justify-end my-2 gap-2">
           <a href="/users/<%= @user.id%>/posts/<%= post.id%>/comments/new" class="hover:text-red-400">Comments: <%= post.comments_counter%>  </a>
           <div class="cursor-pointer like">
-            <span class="like-counter"><%= post.likes_counter%></span>
+            <span class="like-counter">Likes: <%= post.likes_counter%></span>
 
           </div>
         </span>
@@ -35,8 +37,11 @@
   <div class="flex justify-around text-center items-center">
     <% if @posts.length > 3%>
       <button onclick="show(event,'<%= @posts.to_json%>')" id="load-more-posts" type="button" class=" p-2 hover:bg-black hover:text-red-400 rounded-lg tracking-wider font-important text-lg font-semibold">Load More</button>
+      <a href='/users/<%=@user.id%>/posts' class="p-2 hover:bg-black hover:text-red-400 rounded-lg tracking-wider font-important text-lg font-semibold">See All Posts</a>
     <%end%>
-    <a href='/users/<%=@user.id%>/posts' class="p-2 hover:bg-black hover:text-red-400 rounded-lg tracking-wider font-important text-lg font-semibold">See All Posts</a>
+    <% if @posts.length == 0%>
+      <div>No Posts Yet</div>
+    <%end%>
   </div>
   <section>
     <script>

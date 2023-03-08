@@ -26,6 +26,34 @@
     <%= javascript_importmap_tags %>
   </head>
   <body class="font-type1 sm:text-lg tracking-wide break-words">
+  <div>
+   <% if user_signed_in? %>
+    <nav class="bg-red-400 text-white flex justify-between p-3">
+      <div class="flex gap-3">
+        <a href="/users" class="font-important text-2xl">Users</a>
+      </div>
+      <div class="flex gap-3">
+
+          <a href="/users/<%= current_user.id %>" class="h-[30px] ">
+            <img src="<%= current_user.photo%>" alt="photo" class="h-[30px] rounded-xl">
+          </a>
+          <a href="/users/<%= current_user.id%>/posts/new" class="font-important text-xl border border-red-400 hover:border-white p-1 hover:rounded-full">
+            <div class="">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+            </svg>
+            </div>
+          </a>
+          <div class="font-important text-xl hover-underline-animation hover:text-black uppercase">
+          <%= button_to "Log Out", destroy_user_session_path, method: :delete  %>
+          </div>
+
+      </div>
+    </nav>
+     <% end %>
+  </div>
+  <p class="bg-cyan-500 text-center font-important"><%= notice %></p>
+       <p class="bg-red-500 text-center font-important"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
