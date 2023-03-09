@@ -72,12 +72,11 @@
   }
 
     const menuComments = document.querySelectorAll('.menu-comment');
-    const menuCommentItems = document.querySelector('.menu-comments-items')
 
     if(menuComments != null){
       menuComments.forEach((menuComment) => {
         menuComment.addEventListener('click', () => {
-          menuCommentItems.classList.toggle('hidden')
+            menuComment.nextElementSibling.classList.toggle('hidden')
         })
       })
     }
