@@ -30,7 +30,13 @@ class PostsController < ApplicationController
   end
 
   def destroy
-
+    @post = Post.find_by(author_id: params[:user_id], id: params[:post_id])   
+    return render file: "#{Rails.root}/public/404.html", status: :not_found, layout: false if @post.nil? 
+    if @post.destroy     
+      redirect_to user_posts_path(current_user)    
+    else     
+      redirect_to user_post_path(current_user, @post)   
+    end
   end
 
   private
