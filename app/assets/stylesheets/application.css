@@ -48,6 +48,11 @@
   animation-name: slidein2;
 }
 
+.animate-comments {
+  animation-duration: 1.5s;
+  animation-name: slidedown;
+}
+
 @keyframes slidein {
   from {
     margin-left: 50px;
@@ -65,5 +70,11 @@
 
   to {
     margin-left: 0;
+  }
+}
+
+@keyframes slidedown {
+  to {
+    min-height: 120px;
   }
 }
