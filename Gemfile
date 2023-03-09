@@ -29,6 +29,8 @@ gem 'jbuilder'
 
 gem 'jquery-rails'
 
+gem 'devise'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
@@ -77,3 +79,5 @@ end
 group :development, :test do
   gem 'rspec-rails'
 end
+
+gem 'bullet', group: 'development'
