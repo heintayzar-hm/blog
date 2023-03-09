@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     end
   end
   post '/users/:user_id/posts', to: 'posts#create', as: 'create_user_post'
+  delete '/users/:user_id/posts/:post_id', to: 'posts#destroy', as: 'delete_user_post'
   post '/users/:user_id/posts/:post_id/comments', to: 'comments#create', as: 'create_user_post_comment'
   post '/users/:user_id/posts/:post_id/likes', to: 'likes#create', as: 'create_user_post_like'
-
 end
