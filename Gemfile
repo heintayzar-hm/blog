@@ -82,4 +82,8 @@ end
 
 gem 'bullet', group: 'development'
 
+gem 'rack-cors'
+
 gem 'cancancan'
+
+gem 'devise-jwt'
