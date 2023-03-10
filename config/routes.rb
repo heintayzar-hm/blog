@@ -18,7 +18,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      devise_for :users, defaults: { format: :json }
+      devise_for :users, skip: [:sessions], defaults: { format: :json }
 
       resources :users, only: [:index, :show] do
         resources :posts, only: [:index, :show, :new] do
