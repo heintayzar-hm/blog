@@ -37,3 +37,44 @@
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
+.animate-menu {
+  animation-duration: 1.5s;
+  animation-name: slidein;
+}
+
+.animate-menu-2 {
+  animation-duration: 1.5s;
+  animation-name: slidein2;
+}
+
+.animate-comments {
+  animation-duration: 1.5s;
+  animation-name: slidedown;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 50px;
+  }
+
+  to {
+    margin-left: 0;
+  }
+}
+
+@keyframes slidein2 {
+  from {
+    margin-left: 60px;
+  }
+
+  to {
+    margin-left: 0;
+  }
+}
+
+@keyframes slidedown {
+  to {
+    min-height: 120px;
+  }
+}
