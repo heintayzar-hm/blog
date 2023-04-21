@@ -63,7 +63,7 @@ After you're finished please remove all the comments and instructions!
  Looking for a new blog platform? Look no further than the Blog app! With a sleek design and user-friendly interface, this app lets readers discover new posts and authors while giving creators the tools to showcase their writing skills.
 
 **[blog]**  a fully functional website that allows readers to view and interact with posts through comments and likes.
-
+![](https://github.com/heintayzar-hm/blog/blob/dev/app.gif)
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
